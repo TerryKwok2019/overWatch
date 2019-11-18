@@ -1,0 +1,51 @@
+.container {
+	border: solid 1px gray;
+	width: 780px;
+	height: 400px;
+	margin: 8% auto 0 auto;
+	padding: 20px;
+}
+
+.container-left {
+	float: left;
+	width: 45%;
+}
+
+.container-right {
+	float: left;
+	width: 55%;
+}
+
+.container-right h1 {
+	border-bottom: solid 1px gray;
+	text-align: center;
+	font-size: 35px;
+	color: rgb(97, 92, 92);
+	line-height: 60px;
+	background: url('images/logo.jpg') no-repeat 60px;
+	background-size: 70px;
+}
+
+.input-group input {
+	height: 30px;
+	width: 50%;
+	margin-top: 20px;
+	margin-left: 0;
+	padding-left:0; 
+}
+
+.remember {
+	margin-top: 2px;
+	margin-left: 0;
+}
+
+.login-contro button {
+	margin: 25px;
+	width: 85px;
+	height: 35px;
+}
+
+#label1 {
+	height: 25px;
+	width: 25px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+			<div class="hero"  th:each="hero : ${heros}">
+				<a th:href="@{details(id=${hero.id})}" style="display: block; width: 180px; padding: 0"> 
+					<img th:src="${hero.head}" alt="" height="246px;" width="182px;">
+					<p class="p2" th:text="${hero.name}">
+					</p>
+				</a>
+			</div>
+			
+			<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		
+	</script>
+</body>
+</html>

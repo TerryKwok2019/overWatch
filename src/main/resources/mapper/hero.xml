@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online.shixun.project.mapper.HeroMapper">
+	<select id="getHero" resultType="HeroPojo">
+		SELECT
+			*
+		FROM
+			hero
+	</select>
+	
+	<select id="queryHerosByType" resultType="HeroPojo">
+		SELECT
+			id,type,name,head
+		FROM
+			hero
+		WHERE
+			1=1
+		<if test="type != '所有' ">
+			AND type = #{type}
+		</if>
+			
+	</select>
+	
+	<select id="getHeroById" resultType="HeroPojo" parameterType="HeroPojo">
+		SELECT
+			*
+		FROM
+			hero
+		WHERE
+			id=${id}
+	</select>
+	
+	
+	
+</mapper>

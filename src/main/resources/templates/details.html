@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.all {
+	background: url("images/7.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 1200px;
+	margin: auto;
+}
+
+.left {
+	width: 700px;
+	height: 1000px;
+	float: left;
+	margin-left: 50px;
+}
+
+.right {
+	width: 500px;
+	height: 1000px;
+	float: left;
+	margin-left: 25px;
+	margin-right: 50px;
+	margin-top: 20px;
+}
+
+.left-left {
+	background-color: rgba(19, 42, 77, .2);
+	margin-left: 50px;
+	margin-top: 20px;
+	float: left;
+	width: 250px;
+}
+
+.left-right {
+	background-color: rgba(19, 42, 77, .2);
+	width: 250px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.left-centry {
+	background-color: rgba(19, 42, 77, .2);
+	width: 550px;
+	margin-top: 150px;
+	margin-left: 50px;
+	height: 1000px;
+}
+
+.right-centry {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.right-down {
+	text-align: center;
+	margin-top: 20px;
+}
+
+p {
+	color: #ffffff;
+	font-size: 16.5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+h4 {
+	color: #00c3ff;
+	margin: 2px;
+	font-size: 25px;
+	margin-left: 10px;
+}
+
+h1 {
+	color: #ffffff;
+	margin-left: 10px;
+}
+
+</style>
+<body>
+	<div class="all" th:each="hero : ${heroId}">
+		<div class="left">
+			<div class="left-left">
+				<h4>
+					角色类型
+					</h4>
+					<h1 th:text="${hero.type}"></h1>
+			</div>
+			<div class="left-right">
+				<h4 style="color: #00c3ff;">难度</h4>
+				<h1 th:text="${hero.difficulty}"></h1>
+			</div>
+			<div class="left-centry">
+				<h4>简介</h4>
+				<p style="color: #00c3ff;">全称：</p><p th:text="${hero.fullname}">
+					</p>
+				<p style="color: #00c3ff;">职业：</p><p th:text="${hero.occupation}">
+					</p>
+				<p style="color: #00c3ff;">行动基地：</p><p th:text="${hero.base}">
+					</p>
+				<p style="color: #00c3ff;">隶属：</p><p th:text="${hero.subjection}">
+					</p>
+				<h4>背景故事</h4>
+				<p th:text="${hero.p1}"></p>
+				<p th:text="${hero.p2}"></p>
+				<p th:text="${hero.p3}"></p>
+				<p th:text="${hero.p4}"></p>
+				<p th:text="${hero.p5}"></p>
+			</div>
+		</div>
+
+		<div class="right">
+			<div>
+				<img th:src="${hero.img}" alt="" height="385px" width="500px">
+				<h2 class="right-centry" th:text="${hero.name}" style="float:left ;margin-left:150px;">
+		</h2><h2 style="float:left">技能简介</h2>
+				<div class="right-down">
+					<video th:src="${hero.video}" autoplay="autoplay" loop="loop"
+						controls="controls" width="100%" height="100%"></video>
+					<br> <br> <br> <br> <br>
+					<h2 th:text="${hero.features}"></h2>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

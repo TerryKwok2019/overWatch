@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>index</title>
+<link rel="stylesheet" th:href="@{/css/index/index.css}" type="text/css">
+</head>
+<body>
+	<div class="topRight" th:each="list : ${user}">
+		<p class="topRight">Welcome&nbsp;</p>
+		<p th:text="${list.user_name}" class="topRight" style="font-style: italic;"></p>
+	</div>
+	<video class="video" muted="muted" autoplay="autoplay" loop="loop"
+		src="videos/5.mp4"></video>
+	<div class="logo">
+		<img src="images/1.png" width="350px" height="77.77px" alt="">
+	</div>
+	<div class="content">
+		<a href="introduce">
+			<button class="button" type="submit">游戏介绍</button>
+		</a> <a href="queryAllHero">
+			<button class="button" type="submit">英雄</button>
+		</a>
+	</div>
+    <div class="copy-info">
+      <p>
+        <a href="#">明博简介|</a><a href="#">明博公告 |</a><a href="#">招纳贤士 |</a><a href="#">联系我们 |</a>客服热线：888-888-8888
+      </p>
+      <p>Copyright&copy;2006-2016 明博学生版权所有 &nbsp;&nbsp;京ICP备88888888号 &nbsp;&nbsp;京ICP证B8888-8888号 某市公安局XX分局备案编号：888888888888</p>
+    </div>
+
+</body>
+</html>
